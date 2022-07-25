@@ -81,7 +81,8 @@ def prediction_credit(id_client):
 
 
 #  lancement de l'application   (  mode local  et non en mode production  ) 
-
+def create_app():
+       return app
 
 
 if __name__ == "__main__":
