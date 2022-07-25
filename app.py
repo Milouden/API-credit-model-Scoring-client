@@ -27,7 +27,10 @@ model = pickle.load(open('model/ModelClassifier.pkl', 'rb'))
 
 
 
+#app = flask.Flask(__name__)
 app = Flask(__name__)
+
+
 @app.route('/')
 def hello():
     return "Hello Everyone ,  This is my Web API for credit scoring "
@@ -95,9 +98,9 @@ if __name__ == "__main__":
     #uvicorn.run(app = '127.0.0.1', port = 8000, debug = True)
     ##app.run(host = 'localhost', port = 8088, debug = True)
     ## from waitress import serve
-    app.run(host = '127.0.0.1', port = 5000, debug = True)
+    #app.run(host = '127.0.0.1', port = 5000, debug = True)
     #http://127.0.0.1:5000
     ##serve(app, host="0.0.0.0", port=8080)
     ##app.run(debug=True)
-    ##app.debug = True
-    ##app.run()
+    app.debug = True
+    app.run()
