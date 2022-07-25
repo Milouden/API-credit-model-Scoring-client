@@ -1,7 +1,7 @@
 ## Importation des librarys 
 import joblib
 import re
-
+import uvicorn
 from flask import Flask, jsonify
 import pandas as pd
 import pickle
@@ -85,13 +85,13 @@ def create_app():
        return app
 
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
     #import myapp
     #waitress.serve(myapp.wsgifunc, port=8041, url_scheme='https')
     ## from waitress import serve
     #app.run(host = 'localhost', port = 8088, debug = True)
     ## serve(app, host="127.0.0.1", port=8000)
-    ## uvicorn.run(app = '127.0.0.1', port = 8000, debug = True)
+    uvicorn.run(app = '127.0.0.1', port = 8000, debug = True)
     ##app.run(host = 'localhost', port = 8088, debug = True)
     ## from waitress import serve
     ##app.run(host = '127.0.0.1', port = 5000, debug = True)
