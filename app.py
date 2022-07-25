@@ -88,7 +88,7 @@ if __name__ == "__main__":
     #import myapp
     #waitress.serve(myapp.wsgifunc, port=8041, url_scheme='https')
     from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
+    serve(app, host="127.0.0.1", port=8080)
     ## uvicorn.run(app = '127.0.0.1', port = 8000, debug = True)
     ##app.run(host = 'localhost', port = 8088, debug = True)
     ## from waitress import serve
