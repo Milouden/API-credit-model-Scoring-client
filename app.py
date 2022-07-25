@@ -1,7 +1,7 @@
 ## Importation des librarys 
 import joblib
 import re
-import uvicorn
+#import uvicorn
 from flask import Flask, jsonify
 import pandas as pd
 import pickle
@@ -81,8 +81,9 @@ def prediction_credit(id_client):
 
 
 #  lancement de l'application   (  mode local  et non en mode production  ) 
-def create_app():
-       return app
+
+#def create_app():
+#       return app
 
 
 if __name__ == "__main__":
@@ -91,11 +92,12 @@ if __name__ == "__main__":
     ## from waitress import serve
     #app.run(host = 'localhost', port = 8088, debug = True)
     ## serve(app, host="127.0.0.1", port=8000)
-    uvicorn.run(app = '127.0.0.1', port = 8000, debug = True)
+    #uvicorn.run(app = '127.0.0.1', port = 8000, debug = True)
     ##app.run(host = 'localhost', port = 8088, debug = True)
     ## from waitress import serve
     ##app.run(host = '127.0.0.1', port = 5000, debug = True)
     #http://127.0.0.1:5000
     ##serve(app, host="0.0.0.0", port=8080)
     ##app.run(debug=True)
-    ##app.run()
+    app.debug = True
+    app.run()
